@@ -1,0 +1,13 @@
+[Unit]
+Description=Test Service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+WorkingDirectory=/home/rutuja/TY/ComputerNetworks/project/
+User = rutuja
+StandardInput=tty-force
+ExecStart = /usr/bin/python3.8 /home/rutuja/TY/ComputerNetworks/project/rhttp.py
+
+[Install]
+WantedBy=multi-user.target
